@@ -21,5 +21,16 @@ final class FlowTests: QuickSpec {
                 }
             }
         }
+
+        describe("forceUnwrapMap") {
+
+            it("should return array with force unwrapped values") {
+                let values: [Int?] = [1, 2, 3, 4, 5]
+                let result = values.forceUnwrapMap({ value -> String? in
+                    String(describing: value)
+                })
+                expect(result) == ["Optional(1)", "Optional(2)", "Optional(3)", "Optional(4)", "Optional(5)"]
+            }
+        }
     }
 }
