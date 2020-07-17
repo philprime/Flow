@@ -8,7 +8,6 @@
 
 extension Array {
 
-
     /// Returns an array containing the results of mapping the given closure over the sequence’s elements and force unwrapping `Optional` values.
     ///
     ///     let values: [Int?] = [1, 2, 3, nil]
