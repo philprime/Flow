@@ -3,7 +3,7 @@ module: Flow
 author: Philip Niedertscheiders
 author_url: https://github.com/philprime
 copyright: '© 2020 [Philip Niedertscheider](https://philpri.me). All rights reserved.'
-github_url: https://philprime.github.io/Flow
+github_url: https://github.com/philprime/Flow
 
 theme: fullwidth
 
