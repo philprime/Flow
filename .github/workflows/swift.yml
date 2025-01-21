@@ -8,6 +8,7 @@ on:
 
 jobs:
   build-test-macos:
+    name: Build & Test (macOS)
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -30,6 +31,7 @@ jobs:
           -G info.lcov
 
   build-test-linux:
+    name: Build & Test (Linux)
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -39,8 +41,13 @@ jobs:
       run: make test
 
   lint:
+    name: Lint
     runs-on: macos-15
     steps:
     - uses: actions/checkout@v2
+    - name: Install SwiftLint
+      run: |
+        brew install swiftlint
+        swiftlint --version
     - name: Lint
       run: make lint
