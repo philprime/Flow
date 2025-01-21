@@ -1,8 +1,8 @@
 import XCTest
+
 @testable import Flow
 
 final class ForceUnwrapMapTests: XCTestCase {
-    
     func testForceUnwrapMap() {
         // -- Arrange --
         let values: [Int?] = [1, 2, 3, 4, 5]
