@@ -15,9 +15,9 @@ jobs:
     - name: Enable development dependencies
       run: sed -i.bak "s/\/\/dev//g" Package.swift
     - name: Build
-      run: swift build
+      run: make build
     - name: Run tests
-      run: swift test --enable-code-coverage
+      run: make test-with-coverage
     - name: Generate Code Coverage
       run: |
         xcrun llvm-cov export \
@@ -38,9 +38,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: swift build
+      run: make build
     - name: Run tests
-      run: swift test
+      run: make test
 
   swiftlint:
     runs-on: ubuntu-latest
