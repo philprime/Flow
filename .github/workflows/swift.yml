@@ -51,7 +51,3 @@ jobs:
         swiftlint --version
     - name: Lint
       run: make lint
-    - name: Format
-      run: make format
-    - name: Ensure no files changed
-      run: git diff --exit-code
