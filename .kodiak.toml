@@ -1,0 +1,25 @@
+version = 1
+
+[update]
+autoupdate_label = "♻️ autoupdate"
+ignored_usernames = ["renovate"]
+
+[approve]
+auto_approve_usernames = ["renovate", "dependabot"]
+
+[merge]
+method = "squash"
+automerge_label = "🚀 automerge"
+
+# If a PR's title matches this regex, Kodiak will not merge the PR. This is
+# useful to prevent merging work-in-progress PRs.
+blocking_title_regex = "^WIP:.*"
+
+[merge.automerge_dependencies]
+versions = ["minor", "patch"]
+usernames = ["renovate", "dependabot"]
+
+[merge.message]
+title = "pull_request_title"
+body = "pull_request_body"
+include_coauthors = true
