@@ -42,5 +42,10 @@ jobs:
     runs-on: macos-15
     steps:
     - uses: actions/checkout@v2
+    - name: Print Tool Versions
+      run: |
+        set -x
+        swift --version
+        swiftlint --version
     - name: Lint
       run: make lint
