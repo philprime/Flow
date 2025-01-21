@@ -51,12 +51,6 @@ jobs:
         swiftlint --version
     - name: Lint
       run: make lint
-
-  format:
-    name: Format
-    runs-on: macos-15
-    steps:
-    - uses: actions/checkout@v2
     - name: Format
       run: make format
     - name: Ensure no files changed
