@@ -45,12 +45,9 @@ jobs:
     runs-on: macos-15
     steps:
     - uses: actions/checkout@v2
-    - name: Print Tool Versions
+    - name: Install SwiftLint
       run: |
-        set -x
-        find /usr -name swiftlint
-        find /opt -name swiftlint
-        swift --version
+        brew install swiftlint
         swiftlint --version
     - name: Lint
       run: make lint
