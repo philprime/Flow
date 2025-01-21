@@ -48,7 +48,8 @@ jobs:
     - name: Print Tool Versions
       run: |
         set -x
-        find / -name swiftlint
+        find /usr -name swiftlint
+        find /opt -name swiftlint
         swift --version
         swiftlint --version
     - name: Lint
