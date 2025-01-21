@@ -1,15 +1,7 @@
 import XCTest
 @testable import Flow
 
-final class FlowTests: XCTestCase {
-    
-    func testNotWithTruthyPredicate() {
-        XCTAssertFalse(not({ true })(()))
-    }
-    
-    func testNotWithFalseyPredicate() {
-        XCTAssertTrue(not({ false })(()))
-    }
+final class ForceUnwrapMapTests: XCTestCase {
     
     func testForceUnwrapMap() {
         // -- Arrange --
