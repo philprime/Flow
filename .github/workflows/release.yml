@@ -16,6 +16,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
-        uses: mikepenz/action-gh-release@v1
+        uses: mikepenz/action-gh-release@v3
         with:
           body: ${{steps.github_release.outputs.changelog}}
